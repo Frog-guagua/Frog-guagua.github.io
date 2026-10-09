@@ -48,3 +48,12 @@
 body, .layout, #content-inner, #article-container, .search-dialog {
     font-family: 'NanoDyongWongSong', var(--global-font), sans-serif !important;
 }
+/* 加载过场背景色（深蓝黑） */
+#loader {
+    background-color: #0b1d30 !important;
+}
+
+/* 如果默认加载图标也是浅色，可以考虑加一个滤镜让它和主题更搭 */
+#loader .loading-icon {
+    filter: drop-shadow(0 0 10px #F5FFE6) !important;
+}
