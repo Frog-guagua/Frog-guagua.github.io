@@ -1,0 +1,19 @@
+/* 引入现有字体 */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/fonts/nanodyongwongsong.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 设置全局字体 */
+body, .layout, #content-inner, #article-container {
+    font-family: 'MyCustomFont', "Microsoft YaHei", "PingFang SC", sans-serif !important;
+    font-size: 16px;
+}
+
+/* 设置代码字体（代码通常用等宽字体，如果这个字体不是等宽，建议加上Consolas兜底） */
+code, pre, .highlight {
+    font-family: 'MyCustomFont', "Consolas", "Fira Code", monospace !important;
+    font-size: 16px;
+}

@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'NanoDyongWongSong';
+    src: url('/fonts/nanodyongwongsong.ttf') format('truetype');
+}
+#site-title, .site-title {
+    color: #ffffff !important;
+}
+#site-subtitle, .site-subtitle {
+    color: #ffffff !important;
+}
+/* 输入框 */
+.local-search-input input {
+    background-color: #0b1d30 !important; /* 深蓝黑背景 */
+    border: 2px solid #F5FFE6 !important; /* 极淡黄绿边框 */
+    color: #F5FFE6 !important;            /* 极淡黄绿文字 */
+}
+.local-search-input input::placeholder {
+    color: #F5FFE6 !important;            /* 极淡黄绿提示文字 */
+}
+
+/* 搜索弹窗整体背景 */
+#local-search .search-dialog {
+    background: #0b1d30 !important;
+    border: 2px solid #F5FFE6 !important;
+}
+
+/* "搜索"两个字 */
+#local-search .search-dialog-title {
+    color: #F5FFE6 !important;
+}
+
+/* 关闭按钮 "X" */
+#local-search .search-close-button {
+    color: #F5FFE6 !important;
+}
+
+/* 中间横线 */
+#local-search .search-dialog hr {
+    background-color: #F5FFE6 !important;
+    opacity: 0.3;
+}
+
+/* 加载提示文字 */
+#local-search #loading-database,
+#local-search #local-search-stats {
+    color: #F5FFE6 !important;
+}
+body, .layout, #content-inner, #article-container, .search-dialog {
+    font-family: 'NanoDyongWongSong', var(--global-font), sans-serif !important;
+}
