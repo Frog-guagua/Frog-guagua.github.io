@@ -40,20 +40,179 @@
     opacity: 0.3;
 }
 
-/* 加载提示文字 */
-#local-search #loading-database,
-#local-search #local-search-stats {
-    color: #F5FFE6 !important;
-}
-body, .layout, #content-inner, #article-container, .search-dialog {
-    font-family: 'NanoDyongWongSong', var(--global-font), sans-serif !important;
-}
-/* 加载过场背景色（深蓝黑） */
-#loader {
+/* ========== 像素风加载页面（绝对居中 + 延迟渐隐） ========== */
+
+/* 1. 全屏深蓝背景，绝对居中所有内容 */
+#loading-box {
     background-color: #0b1d30 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 9999 !important;
+    /* 关键：延迟1秒，再用1秒渐渐消失 */
+    transition: opacity 1s ease 1s, visibility 1s ease 1s !important;
 }
 
-/* 如果默认加载图标也是浅色，可以考虑加一个滤镜让它和主题更搭 */
-#loader .loading-icon {
-    filter: drop-shadow(0 0 10px #F5FFE6) !important;
+/* 2. 加载完成后，触发隐去 */
+#loading-box.loaded {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* 3. 隐藏官方自带的背景和旋转方块 */
+#loading-box .loading-left-bg,
+#loading-box .loading-right-bg,
+#loading-box .configure-border-1,
+#loading-box .configure-border-2 {
+    display: none !important;
+}
+
+/* 4. 进度条容器（让它稳稳地居中，不偏移） */
+#loading-box .spinner-box {
+    position: relative !important;
+    display: block !important;
+    width: 240px !important;
+    height: 24px !important;
+    background-color: transparent !important;
+    margin: auto !important; /* 配合父级的 Flex，双重保险居中 */
+}
+
+/* 5. 像素风进度条外框（方角 + 多层硬阴影） */
+#loading-box .spinner-box::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #C6D166; /* 亮绿色像素边框 */
+    border-radius: 0 !important; /* 无圆角，像素风 */
+    background-color: #0b1d30;
+    box-shadow:
+            0 0 0 4px #0b1d30,
+            0 0 0 8px #C6D166; /* 多层像素描边 */
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+/* 6. 像素风进度条填充（一截一截地跳） */
+#loading-box .spinner-box::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: calc(100% - 8px);
+    width: 0;
+    background-color: #C6D166;
+    border-radius: 0 !important;
+    animation: pixel-load 2s steps(8) infinite; /* steps(8) 实现硬核跳跃 */
+    z-index: 2;
+}
+
+/* 7. 像素风“加载中”文字（带硬描边+硬闪烁） */
+#loading-box .loading-word {
+    position: absolute !important;
+    top: 35px; /* 位于进度条正下方 */
+    font-family: 'NanoDyongWongSong', 'Microsoft YaHei', monospace !important;
+    color: #C6D166 !important;
+    font-size: 20px;
+    letter-spacing: 6px;
+    text-shadow: 2px 2px 0px #0b1d30, -1px -1px 0px #0b1d30, 1px -1px 0px #0b1d30, -1px 1px 0px #0b1d30; /* 像素描边 */
+    white-space: nowrap;
+    animation: text-blink 1s steps(2) infinite; /* 硬闪烁，无渐变 */
+    z-index: 3;
+}
+
+/* 8. 动画关键帧 */
+@keyframes pixel-load {
+    0% { width: 0; }
+    100% { width: calc(100% - 8px); }
+}
+
+@keyframes text-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+/* ========== 页脚背景颜色 ========== */
+#footer {
+    background-color: #0b1d30 !important; /* 深蓝黑底色 */
+    border-top: 1px solid #F5FFE6;        /* 淡黄绿上边框，增加分割感 */
+}
+#footer .copyright,
+#footer .framework-info,
+#footer .framework-info a {
+    color: #F5FFE6 !important;            /* 文字改成淡黄绿 */
+}
+
+/* ========== “Follow Me”按钮颜色 ========== */
+#card-info-btn {
+    background-color: #0b1d30 !important; /* 深蓝黑底色 */
+    color: #F5FFE6 !important;            /* 淡黄绿文字 */
+    border: 2px solid #F5FFE6 !important; /* 淡黄绿边框 */
+    transition: all 0.3s ease;
+}
+#card-info-btn:hover {
+    background-color: #F5FFE6 !important; /* 悬停时变成浅色背景 */
+    color: #0b1d30 !important;            /* 悬停时图标和文字变成深色 */
+}
+#web_bg {
+    background-image: linear-gradient(rgba(11, 29, 48, 0.6), rgba(11, 29, 48, 0.6)), url('/images/background.jpg') !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1 !important;
+}
+/* 友链页面的标题：居中、大字号，带上副标题和蓝黑粗横线 */
+body:has(.flink) .page-title {
+    text-align: center !important;       /* 水平居中 */
+    font-size: 2rem !important;          /* 大标题字号 */
+    font-weight: bold !important;        /* 加粗 */
+    letter-spacing: 6px !important;      /* 字间距拉开 */
+    margin-bottom: 40px !important;      /* 和下方内容留出距离 */
+    padding-bottom: 0 !important;        /* 清除原来的内边距 */
+    border-bottom: none !important;      /* 清除原来的横线，改用下方的伪元素控制 */
+}
+
+/* 副标题 + 蓝黑粗横线 */
+body:has(.flink) .page-title::after {
+    content: "假期和朋友，是人生中是顶好的两样啊";
+    display: block;
+    font-size: 0.8em;                      /* 👈 字号变大（原来 0.4em） */
+    font-weight: normal;
+    color: #4A6076 !important;           
+    letter-spacing: 2px;
+    margin-top: 5px;                       /* 👈 距离主标题更近（原来 15px） */
+    padding-bottom: 20px;
+    border-bottom: 5px solid #202740 !important;
+    text-shadow: none !important;
+}
+/* 友链卡片悬停：极淡黄绿背景 + 蓝黑色描边 */
+.flink-list-item:hover {
+    background-color: #F5FFE6 !important; /* 最开始那种极淡黄绿 */
+    border: 3px solid #0b1d30 !important; /* 蓝黑色描边，3px粗 */
+    transform: translateY(-3px) !important; /* 加个轻微上浮，更灵动 */
+    box-shadow: 0 5px 15px rgba(11, 29, 48, 0.3) !important; /* 蓝黑色系阴影 */
+    transition: all 0.3s ease !important;
+}
+
+/* 悬停时，让里面的名字和描述变回深色，不然看不清 */
+.flink-list-item:hover .flink-item-name {
+    color: #0b1d30 !important;
+}
+.flink-list-item:hover .flink-item-desc {
+    color: #0b1d30 !important;
 }

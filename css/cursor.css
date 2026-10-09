@@ -8,17 +8,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    pointer-events: none; /* 关键！否则你的鼠标就点不了任何东西了 */
+    pointer-events: none; /* 关键！不然鼠标点不了任何东西 */
     z-index: 999999;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease; /* 只保留网页进出时的淡入淡出 */
 }
 
-/* 四芒星本体 */
 #cursor-star {
     width: 30px;
     height: 30px;
     transform-origin: center center;
-    /* 0.25秒的弹性过渡，带来丝滑的缩放效果 */
-    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.25s ease;
-    filter: drop-shadow(0 0 5px rgba(245, 255, 230, 0.8)); /* 默认微光 */
+    transition: transform 0.1s ease-out, filter 0.1s ease-out; /* 只留给点击缩放用 */
+    filter: drop-shadow(0 0 5px rgba(245, 255, 230, 0.8));
 }
