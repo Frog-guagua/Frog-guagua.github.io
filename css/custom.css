@@ -216,3 +216,8 @@ body:has(.flink) .page-title::after {
 .flink-list-item:hover .flink-item-desc {
     color: #0b1d30 !important;
 }
+/* 调整正文的字号大小 */
+#article-container, .post-content {
+    font-size: 17px !important; /* 这里填你想要的字号，比如 16px、17px、18px */
+    line-height: 1.4 !important; /* 顺便调大一点行高，阅读更舒服 */
+}
