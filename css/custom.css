@@ -218,6 +218,17 @@ body:has(.flink) .page-title::after {
 }
 /* 调整正文的字号大小 */
 #article-container, .post-content {
-    font-size: 17px !important; /* 这里填你想要的字号，比如 16px、17px、18px */
-    line-height: 1.4 !important; /* 顺便调大一点行高，阅读更舒服 */
+    font-size: 22px !important; /* 这里填你想要的字号，比如 16px、17px、18px */
+    line-height: 1.6 !important; /* 顺便调大一点行高，阅读更舒服 */
+    letter-spacing: 1px !important; /* 字间距，1px 是微调，2px 就很宽松了 */
+}
+/* 强制让自定义光标永远在最顶层 */
+#cursor-wrapper {
+    z-index: 2147483647 !important; /* 这是CSS能识别的最大值（32位整数最大值） */
+    position: fixed !important;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
 }
