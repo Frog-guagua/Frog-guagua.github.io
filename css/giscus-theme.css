@@ -1,0 +1,37 @@
+/* 引入你的专属字体 */
+@font-face {
+    font-family: 'NanoDyongWongSong';
+    src: url('/fonts/nanodyongwongsong.ttf') format('truetype');
+}
+
+/* 覆盖 Giscus 的全局配色与字体变量 */
+:root {
+    --color-canvas-default: #ffffff !important;   /* 白色底色 */
+    --color-canvas-subtle: #f8f9fa !important;    /* 输入框等区域的微灰底色 */
+    --color-fg-default: #111C2F !important;       /* 主文字颜色（深蓝黑） */
+    --color-fg-muted: #57606a !important;         /* 次要文字颜色 */
+    --color-accent-fg: #0b1d30 !important;        /* 按钮等强调色（深蓝） */
+    --color-border-default: #0b1d30 !important;   /* 边框颜色（深蓝） */
+}
+
+/* 强制覆盖字体 */
+body, .gsc-main, .gsc-comment-content {
+    font-family: 'NanoDyongWongSong', 'Microsoft YaHei', sans-serif !important;
+}
+
+/* 给整个评论区容器加圆角和深蓝边框 */
+body {
+    border: 2px solid #0b1d30 !important;
+    border-radius: 16px !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+/* 给Giscus评论区的iframe外层套上粗边框和白底 */
+iframe.giscus-frame {
+    border: 3px solid #0b1d30 !important;   /* 深蓝色粗边框（数值3就是粗） */
+    border-radius: 18px !important;         /* 圆角，配合深蓝边框非常精致 */
+    background-color: #ffffff !important;   /* 纯白底色 */
+    box-shadow: 0 4px 15px rgba(11, 29, 48, 0.1) !important; /* 加一点投影，立体会更好看 */
+    padding: 5px !important;                /* 避免内层白边紧贴粗边框 */
+}

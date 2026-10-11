@@ -232,3 +232,9 @@ body:has(.flink) .page-title::after {
     width: 0;
     height: 0;
 }
+/* 让外部 iframe 容器也圆润起来 */
+giscus-widget, .giscus {
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(11, 29, 48, 0.1) !important; /* 加一点淡淡的投影更高级 */
+}

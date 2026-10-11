@@ -234,7 +234,8 @@ function toggleBgm() {
     <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" fill="#F5FFE6" stroke="#0b1d30" stroke-width="6" stroke-linejoin="round" />
   </svg>
 </div>
-      <script>
+  - |
+<script>
 const cw = document.getElementById('cursor-wrapper');
 const cs = document.getElementById('cursor-star');
 
@@ -265,5 +266,20 @@ document.addEventListener('mouseleave', () => {
 document.addEventListener('mouseenter', () => {
     cw.style.opacity = '1';
 });
+
+// 🌟 核心修复：进入 iframe（评论区）时隐藏光标，离开时恢复
+function handleIframes() {
+    const iframes = document.querySelectorAll('iframe');
+    iframes.forEach(iframe => {
+        if (iframe.dataset.cursorBound) return;
+        iframe.dataset.cursorBound = 'true';
+        iframe.addEventListener('mouseenter', () => { cw.style.opacity = '0'; });
+        iframe.addEventListener('mouseleave', () => { cw.style.opacity = '1'; });
+    });
+}
+
+handleIframes();
+const observer = new MutationObserver(() => { handleIframes(); });
+observer.observe(document.body, { childList: true, subtree: true });
 </script>
 <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="想找点什么呢？" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
