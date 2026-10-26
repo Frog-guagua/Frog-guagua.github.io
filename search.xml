@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>CUC游创一结课作业：老人与虫</title>
+      <link href="/2026/10/26/%E3%80%8A%E8%80%81%E4%BA%BA%E4%B8%8E%E8%99%AB%E3%80%8B%EF%BC%9A%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E6%B8%B8%E6%88%8F/"/>
+      <url>/2026/10/26/%E3%80%8A%E8%80%81%E4%BA%BA%E4%B8%8E%E8%99%AB%E3%80%8B%EF%BC%9A%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%BE%E6%B8%B8%E6%88%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="▶-说在最最前面的一些"><a href="#▶-说在最最前面的一些" class="headerlink" title="▶ 说在最最前面的一些"></a>▶ 说在最最前面的一些</h1><div align="center">  <a href="/images/post_OldManAndBug/post_img7.jpg" data-fancybox="gallery" title="点击查看大图">    <img src=/images/post_OldManAndBug/post_img7.jpg width="400" alt="只是无意义表情包">  </a></div><blockquote><p>《老人与虫》，这是我们在大一游戏创作课程中创作的一款游戏</p></blockquote><p><strong>我主要担任了：</strong><br><span style="background-color: #eaf1f8; padding: 2px 6px; border-radius: 4px;"><strong>战斗模块程序实现</strong></span>，<span style="background-color: #eaf1f8; padding: 2px 6px; border-radius: 4px;"><strong>程序化视觉效果</strong></span>，以及<span style="background-color: #eaf1f8; padding: 2px 6px; border-radius: 4px;"><strong>所有音乐制作</strong></span>，<span style="background-color: #eaf1f8; padding: 2px 6px; border-radius: 4px;"><strong>宣传视频剪辑</strong></span>的任务</p><p>项目中和大家的配合很青涩，但是所有人都已全力以赴<br>这个游戏或许是最好的证明<br><br><br></p><h1 id="▶-项目概述"><a href="#▶-项目概述" class="headerlink" title="▶ 项目概述"></a>▶ 项目概述</h1><div align="center">  <a href="/images/post_OldManAndBug/icon.png" data-fancybox="gallery" title="点击查看大图">    <img src=/images/post_OldManAndBug/icon.png width="400" alt="可爱的图标喵">  </a></div><p>这是一款以老北京胡同文化为背景的<span style="background-color: #eaf1f8; padding: 2px 6px; border-radius: 4px;"><strong>像素风 Roguelike 卡牌构筑（DBG）游戏</strong></span>。</p><p>以传统斗蛐蛐文化为核心玩法，兼具高策略性与市井生活气息。游戏以胡同街坊的日常为舞台，生动还原了老北京的人情往来与烟火氛围。<br><br></p><h1 id="▶-核心设定与玩法"><a href="#▶-核心设定与玩法" class="headerlink" title="▶ 核心设定与玩法"></a>▶ 核心设定与玩法</h1><h2 id="1-卡牌构筑与虫虫之间的对决"><a href="#1-卡牌构筑与虫虫之间的对决" class="headerlink" title="1. 卡牌构筑与虫虫之间的对决"></a>1. 卡牌构筑与虫虫之间的对决</h2><div align="center">  <a href="/images/post_OldManAndBug/post_img2.jpg" data-fancybox="gallery" title="点击查看大图">    <img src=/images/post_OldManAndBug/post_img2.jpg width="400" alt="可爱の虫虫">  </a></div><p>玩家以养虫人的身份收集、培育各类蛐蛐，通过胡同斗蛐蛐的规则进行卡牌对战。搭配不同特性的<span style="background-color: #eaf1f8; padding: 2px 6px; border-radius: 4px;"><strong>虫卡、道具与技能</strong></span>，构筑专属卡组。</p><h2 id="2-养成玩法"><a href="#2-养成玩法" class="headerlink" title="2. 养成玩法"></a>2. 养成玩法</h2><div align="center">  <a href="/images/post_OldManAndBug/post_img3.jpg" data-fancybox="gallery" title="点击查看大图">    <img src=/images/post_OldManAndBug/post_img3.jpg width="400" alt="虫虫抓捕">  </a></div><p>玩家可以在胡同的老粮铺、花鸟市场、鬼市摊位等地搜集养虫秘方与强化道具，<br>喂养、改造自己的主力蛐蛐。</p><h2 id="3-市井事件"><a href="#3-市井事件" class="headerlink" title="3. 市井事件"></a>3. 市井事件</h2><div align="center">  <a href="/images/post_OldManAndBug/post_img4.jpg" data-fancybox="gallery" title="点击查看大图">    <img src=/images/post_OldManAndBug/post_img4.jpg width="400" alt="大爷唠嗑">  </a></div><p>除了卡牌对战，<strong>游戏包含丰富的胡同生活事件</strong>：<br>与刘大爷、戴钱等老友唠嗑取经，应对胡同神棍的骗局与敲诈，<br>处理街坊邻里的突发矛盾，或是在清晨的墙根采集养虫晨露、为过冬的蛐蛐储备口粮。</p><p>每一次选择都会影响角色的<span style="background-color: #eaf1f8; padding: 2px 6px; border-radius: 4px;"><strong>声望、资源与卡组养成</strong></span>，<br>胡同里的各方势力也会根据玩家的行为态度调整互动方式，<br>或是热情搭话，或是处处刁难。</p><p><br><br></p><h1 id="▶-目标与核心循环"><a href="#▶-目标与核心循环" class="headerlink" title="▶ 目标与核心循环"></a>▶ 目标与核心循环</h1><div align="center">  <a href="/images/post_OldManAndBug/post_img5.jpg" data-fancybox="gallery" title="点击查看大图">    <img src=/images/post_OldManAndBug/post_img5.jpg width="400" alt="虫虫战斗">  </a></div><p>玩家的目标是，在胡同斗蛐蛐的江湖中一路过关斩将，挑战各路高手，最终赢下<span style="background-color: #eaf1f8; padding: 2px 6px; border-radius: 4px;">“<strong>胡同虫王</strong>“</span>的称号。</p><p>在一次次肉鸽循环中，玩家将解锁更多养虫秘方、稀有虫种与胡同往事，感受老北京斗蛐蛐文化的独特魅力。</p><p><br><br></p><h1 id="▶-青蛙还想说的"><a href="#▶-青蛙还想说的" class="headerlink" title="▶ 青蛙还想说的"></a>▶ 青蛙还想说的</h1><div align="center">  <a href="/images/post_OldManAndBug/post_img6.jpg" data-fancybox="gallery" title="点击查看大图">    <img src=/images/post_OldManAndBug/post_img6.jpg width="400" alt="虫虫战斗">  </a></div><blockquote><p>这算是我第一个完整做出来而且可以玩的游戏，<br><strong>我很喜欢这个游戏</strong>，<br>希望以后没有前进的锐气的时候，<br>再回来看看这个不那么完美且稚嫩的第一作，<br>可以让我稍微回想起做游戏的热情</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 蛙做的游戏们 </category>
+          
+          <category> Unity </category>
+          
+          <category> 2D </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 蛙の游戏，unity，2d </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一章：青蛙占领地球后的一些日子</title>
       <link href="/2026/10/08/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E9%9D%92%E8%9B%99%E5%8D%A0%E9%A2%86%E5%9C%B0%E7%90%83%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E6%97%A5%E5%AD%90/"/>
       <url>/2026/10/08/%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BC%9A%E9%9D%92%E8%9B%99%E5%8D%A0%E9%A2%86%E5%9C%B0%E7%90%83%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E6%97%A5%E5%AD%90/</url>
@@ -20,7 +49,7 @@
       
         <tags>
             
-            <tag> 测试 </tag>
+            <tag> 关于青蛙的事 </tag>
             
         </tags>
       
